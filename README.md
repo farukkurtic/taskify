@@ -7,6 +7,8 @@ Welcome to Taskify, a full-stack web application built using the MERN stack (Mon
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Database Schema](#database-schema)
+- [Demo](#demo)
+- [Conclusion](#conclusion)
 
 ## Features
 
@@ -39,6 +41,7 @@ Welcome to Taskify, a full-stack web application built using the MERN stack (Mon
       ```bash
       cd client
       npm install
+      
       cd ../server
       npm install
 
@@ -49,14 +52,14 @@ Welcome to Taskify, a full-stack web application built using the MERN stack (Mon
   - Start the development server:
  
       - In the server/src directory:
+
         ```bash
         node index.js
       
-      
       - In the client directory:
+        
         ```bash
         npm start
-
 
   - Access the app in your browser:
   
@@ -66,6 +69,9 @@ Welcome to Taskify, a full-stack web application built using the MERN stack (Mon
 
    The app's MongoDB schema includes a User collection for user authentication and a Task collection for managing tasks. The Mongoose schema definitions can be found in the server/models directory.
 
+## Demo
+
+![2023-09-06 17-07-36 (online-video-cutter com)](https://github.com/farukkurtic/Taskify/assets/34779712/56ba62de-53bd-4c51-9d86-25c718f3c34d)
 
 
 ## Conclusion
