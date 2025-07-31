@@ -1,8 +1,5 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-
-// pages
-
 import Home from './pages/home';
 import Registration from './pages/register';
 import UserLogin from './pages/login';
