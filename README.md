@@ -7,8 +7,6 @@ Welcome to Taskify, a full-stack web application built using the MERN stack (Mon
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Database Schema](#database-schema)
-- [Demo](#demo)
-- [Conclusion](#conclusion)
 
 ## Features
 
