@@ -15,8 +15,6 @@ export default function List () {
     const [cookies] = useCookies(["userID"]);
     const [userData, setUserData] = useState();
     const navigate = useNavigate();
-
-    // data fetching
     useEffect(function() {
         if(cookies.userID) {
             const fetchUserData = async function() { 
@@ -35,7 +33,6 @@ export default function List () {
         }
     }, [cookies.userID, userData?.todo]);
 
-    // get formatted date
     const date = new Date();
     const options = { day: "numeric", month: "long", year: "numeric" };
     const formattedDate = date.toLocaleDateString(undefined, options);
