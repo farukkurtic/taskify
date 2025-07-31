@@ -17,8 +17,6 @@ body {
     width: 22%;
     margin: auto;
     margin-top: 85px;
-
-
 }
 
 .no-tasks i {
@@ -40,8 +38,6 @@ body {
     
     font-weight: 900 !important;
 }
-
-/* animation classes */
 
 .fade-out {
     opacity: 1;
@@ -73,8 +69,6 @@ body {
     animation: fadeInAnimation 1s ease forwards;
 }
 
-/* navbar */
-
 nav {
     width: 100%;
     display: flex;
@@ -95,8 +89,6 @@ nav button i {
     color: white !important;
 }
 
-/* footer */
-
 footer {
     width: 100%;
     display: flex;
@@ -109,8 +101,6 @@ footer {
     position: fixed;
     bottom: 0;
 }
-
-/* home page */
 
 .home {
 
@@ -173,9 +163,6 @@ footer {
 
 }
 
-
-/* registration page */
-
 .registration {
     height: 85vh;
     
@@ -228,8 +215,6 @@ footer {
     color: red;
 }
 
-/* login page */
-
 .user-login {
     height: 85vh;
     
@@ -270,10 +255,6 @@ footer {
     border: none;
 }
 
-/* list page */
-
-/* list heading */
-
 .header-container {
 
     width: 30%;
@@ -293,8 +274,6 @@ footer {
     font-size: 50px !important;
     font-weight: 800;
 }
-
-/* item */
 
 .item {
 
@@ -326,8 +305,6 @@ footer {
     -webkit-text-fill-color: transparent;
 
 }
-
-/* add item bar */
 
 .new-item-form {
     width: 22%;
@@ -362,8 +339,6 @@ footer {
     font-size: 20px;
 }
 
-/* login header */
-
 .login-header {
     width: 100%;
     display: flex;
@@ -379,8 +354,6 @@ footer {
     color: white !important;
     background-color: #1E3050 !important;
 }
-
-/* 404 */
 
 .not-found {
     display: flex;
