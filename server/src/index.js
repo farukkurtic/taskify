@@ -5,8 +5,6 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
-
-// models 
 import { User } from "./models/Users.js";
 
 const app = express();
@@ -17,9 +15,6 @@ mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
-
-
-// registration -----------------------------------------------------------------------------------------------------------------------------
 
 app.post("/register", async function(req, res) {
 
@@ -35,24 +30,19 @@ app.post("/register", async function(req, res) {
 
     newUser.save()
     .then(savedUser => {
-            // successfully saved
             console.log('User saved:', savedUser);
-            //res.status(200).send('User registered successfully'); // Send a response indicating successful registration
             res.json(savedUser._id);
     })
     .catch(error => {
-            // Error occurred while saving the user document
             console.error('Error saving user:', error);
             res.status(500).send('Error registering user'); // Send an error response
     });  
 
 });
 
-// check if user already exists
 app.get("/checkEmail/:email", async function(req, res) {
 
     const { email } = req.params;
-
     const user = await User.findOne({ email });
     if(user) {
         res.json({exists: true})
@@ -62,28 +52,23 @@ app.get("/checkEmail/:email", async function(req, res) {
     
 });
 
-// login -----------------------------------------------------------------------------------------------------------------------------
-
 app.post("/login", async function (req, res) {
 
     const { email, password } = req.body;
   
     try {
-      // Find the user with the provided email
       const user = await User.findOne({ email });
   
       if (!user) {
         return res.status(404).json({ message: "User not found" });
       }
-  
-      // Use bcrypt to compare the provided password with the hashed password from the database
       const match = await bcrypt.compare(password, user.password);
   
       if (match) {
         const userId = user.id;
-        res.json(userId); // Login successful
+        res.json(userId); 
       } else {
-        res.json(false); // Password doesn't match, login failed
+        res.json(false); 
       }
     } catch (error) {
       console.error("Error occurred during login:", error);
@@ -111,8 +96,6 @@ app.get("/users/:id", async function(req, res) {
 
 });
 
-// add task
-
 app.post(`/tasks/:id`, async function(req, res) {
     const { id } = req.params;
     const { task } = req.body;
@@ -132,8 +115,6 @@ app.post(`/tasks/:id`, async function(req, res) {
 
     res.status(200).json(savedUser);
 });
-
-// delete task
 
 app.delete(`/tasks/delete/:userId/:taskId`, async function(req, res) {
     try {
